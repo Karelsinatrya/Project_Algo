@@ -1,0 +1,32 @@
+DEKLARASI
+    JUMLAH_KANDIDAT ← 3
+    kandidat[JUMLAH_KANDIDAT]
+    suara[JUMLAH_KANDIDAT] ← 0
+    pilihan, vote : integer
+
+ULANGI
+    TAMPILKAN menu
+    INPUT pilihan
+
+    JIKA pilihan = 1 MAKA
+        TAMPILKAN daftar kandidat
+        INPUT vote
+        JIKA vote valid MAKA
+            suara[vote - 1] ← suara[vote - 1] + 1
+            TAMPILKAN "Suara tercatat"
+        ELSE
+            TAMPILKAN "Pilihan tidak valid"
+        ENDIF
+
+    ELSE JIKA pilihan = 2 MAKA
+        TAMPILKAN hasil voting
+
+    ELSE JIKA pilihan = 3 MAKA
+        TAMPILKAN "Keluar"
+
+    ELSE
+        TAMPILKAN "Menu tidak valid"
+    ENDIF
+
+SELAMA pilihan ≠ 3
+SELESAI
