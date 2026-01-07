@@ -1,0 +1,39 @@
+DEKLARASI
+    MAX ← 100
+    merk[MAX], tipe[MAX] : string
+    tahun[MAX], harga[MAX] : integer
+    jumlah ← 0
+    pilihan : integer
+
+ULANGI
+    TAMPILKAN menu
+    INPUT pilihan
+
+    JIKA pilihan = 1 MAKA
+        JIKA jumlah < MAX MAKA
+            INPUT merk[jumlah]
+            INPUT tipe[jumlah]
+            INPUT tahun[jumlah]
+            INPUT harga[jumlah]
+            jumlah ← jumlah + 1
+        ELSE
+            TAMPILKAN "Data sudah penuh"
+        ENDIF
+
+    ELSE JIKA pilihan = 2 MAKA
+        JIKA jumlah = 0 MAKA
+            TAMPILKAN "Belum ada data mobil"
+        ELSE
+            UNTUK i ← 0 HINGGA jumlah-1
+                TAMPILKAN data mobil ke-(i+1)
+            SELESAI
+        ENDIF
+
+    ELSE JIKA pilihan = 3 MAKA
+        SELESAI PROGRAM
+
+    ELSE
+        TAMPILKAN "Pilihan tidak valid"
+    ENDIF
+
+SELAMA pilihan ≠ 3
